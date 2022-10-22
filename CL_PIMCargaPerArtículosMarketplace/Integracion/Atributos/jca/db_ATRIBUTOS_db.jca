@@ -1,0 +1,13 @@
+<adapter-config name="db_ATRIBUTOS" adapter="db" wsdlLocation="../wsdl/db_ATRIBUTOS.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory UIConnectionName=" EBSDVPIM" location="eis/DB/EBSDVPIM"/>
+  <endpoint-interaction portType="db_ATRIBUTOS_ptt" operation="db_ATRIBUTOS">
+    <interaction-spec className="oracle.tip.adapter.db.DBStoredProcedureInteractionSpec">
+      <property name="SchemaName" value="MKP_PIM"/>
+      <property name="PackageName" value="PCK_PIMC_ART_MARKETPLACE"/>
+      <property name="ProcedureName" value="PCR_PUT_ATRIBUTOS"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>

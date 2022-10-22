@@ -1,0 +1,218 @@
+<xs:schema attributeFormDefault="unqualified" 
+elementFormDefault="qualified" 
+targetNamespace="http://www.demandware.com/xml/impex/order/2006-10-31" 
+xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+  <xs:element name="Inventario_Request">        
+    <xs:complexType>
+      <xs:sequence>
+      
+        <xs:element name="Estado_Articulo" minOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="20"/>
+          </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+        
+        <xs:element name="Codigo_MKP" minOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="9"/>
+          </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+        <xs:element name="Codigo_PIM" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="0"/>
+            <xs:maxLength value="6"/>
+          </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+        
+        <xs:element name="Organizacion" minOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="3"/>
+          </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+       <xs:element name="Categoria" minOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="40"/>
+          </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+        <xs:element name="Plantilla" minOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="30"/>
+          </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+       <xs:element name="UDM" minOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="3"/>
+          </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+       <xs:element name="Tipo" minOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="30"/>
+          </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+        <xs:element name="Descripcion_Inv" minOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="25"/>
+          </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+        <xs:element name="Descripcion_Larga_Inv" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="0"/>
+            <xs:maxLength value="70"/>
+          </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+      
+        <xs:element  name="Estado_Proceso" minOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+              <xs:totalDigits value="2"/>
+          </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        
+        
+        <xs:element name="Estado" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="0"/>
+            <xs:maxLength value="30"/>
+          </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+        
+         <xs:element type="xs:date" name="Fecha_Creacion" minOccurs="1"/>
+         
+         <xs:element type="xs:date" name="Fecha_Actualizacion" minOccurs="0"/>
+         
+        <xs:element name="Comentario1_Estado" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="0"/>
+            <xs:maxLength value="2000"/>
+          </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+        
+        <xs:element name="Comentario2_Estado" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="0"/>
+            <xs:maxLength value="2000"/>
+          </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+        
+              <xs:element name="Atributos-Items">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Atributos-Item" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                        
+                      <xs:element name="Grupo_PIM" minOccurs="1">
+                         <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="200"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                        </xs:element>
+                         
+                         <xs:element name="Atributo_PIM" minOccurs="1">
+                          <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="200"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                        </xs:element>
+                         
+                         <xs:element name="Valor_Atributo_PIM" minOccurs="1">
+                          <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="2000"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                        </xs:element>
+                         
+                         <xs:element type="xs:int" name="Numero_Fila" minOccurs="1"/>
+                         
+                        <xs:element  name="Estado_Proceso" minOccurs="1">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:integer">
+                              <xs:totalDigits value="2"/>
+                          </xs:restriction>
+                          </xs:simpleType>
+                        </xs:element>
+                        
+                        
+                        <xs:element name="Estado" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:minLength value="0"/>
+                            <xs:maxLength value="30"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                        </xs:element>
+                        
+                         <xs:element type="xs:date" name="Fecha_Creacion" minOccurs="1"/>
+                         
+                         <xs:element type="xs:date" name="Fecha_Actualizacion" minOccurs="0"/>
+                         
+                        <xs:element name="Comentario1_Estado" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:minLength value="0"/>
+                            <xs:maxLength value="2000"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                        </xs:element>
+                        
+                        <xs:element name="Comentario2_Estado" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:minLength value="0"/>
+                            <xs:maxLength value="2000"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                        </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+      </xs:sequence>
+    </xs:complexType>     
+  </xs:element>
+</xs:schema>

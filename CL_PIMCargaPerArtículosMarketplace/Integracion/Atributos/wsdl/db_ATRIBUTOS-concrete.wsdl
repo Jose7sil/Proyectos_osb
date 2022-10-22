@@ -1,0 +1,15 @@
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/4720vDIFARMA/CL_PIMCargaPerArt%C3%ADculosMarketplace/db_ATRIBUTOS" name="db_ATRIBUTOS-concrete" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <wsdl:import location="db_ATRIBUTOS.wsdl" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/4720vDIFARMA/CL_PIMCargaPerArt%C3%ADculosMarketplace/db_ATRIBUTOS"/>
+    <wsdl:binding name="db_ATRIBUTOS_ptt-binding" type="db:db_ATRIBUTOS_ptt" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/4720vDIFARMA/CL_PIMCargaPerArt%C3%ADculosMarketplace/db_ATRIBUTOS">
+        <soap:binding style="document" transport="http://www.bea.com/wli/sb/transports/jca"/>
+        <wsdl:operation name="db_ATRIBUTOS">
+            <soap:operation soapAction="db_ATRIBUTOS"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+</wsdl:definitions>

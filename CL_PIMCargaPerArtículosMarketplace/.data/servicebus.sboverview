@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:composite xmlns:ns="http://xmlns.oracle.com/sca/1.0">
+    <ns:reference>
+        <ns:interface src="BusinessService:CL_PIMCargaPerArtículosMarketplace/Integracion/Atributos/businessService/db_ATRIBUTOS"/>
+    </ns:reference>
+    <ns:reference>
+        <ns:interface src="BusinessService:CL_DIF_OMS_Traza/JMS/JMS_DEPOSITO_TRAZA"/>
+    </ns:reference>
+    <ns:reference>
+        <ns:interface src="BusinessService:CL_PIMCargaPerArtículosMarketplace/Integracion/Inventario/businessService/db_Inventario"/>
+    </ns:reference>
+</ns:composite>

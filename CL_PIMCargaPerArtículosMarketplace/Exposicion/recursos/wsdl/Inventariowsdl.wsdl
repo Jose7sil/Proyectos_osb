@@ -1,0 +1,44 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<wsdl:definitions
+     name="Inventariowsdl"
+     targetNamespace="http://xmlns.oracle.com/4720vDIFARMA/CL_PIMCargaPerArt%C3%ADculosMarketplace/service1"
+     xmlns:tns="http://xmlns.oracle.com/4720vDIFARMA/CL_PIMCargaPerArt%C3%ADculosMarketplace/service1"
+     xmlns:inp1="http://www.demandware.com/xml/impex/order/2006-10-31"
+     xmlns:inp2="http://www.socofar.cl/inventario/resp"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+    <wsdl:types>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://www.demandware.com/xml/impex/order/2006-10-31" schemaLocation="../xsd/inventario_req.xsd"/>
+        </xsd:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://www.socofar.cl/inventario/resp" schemaLocation="../xsd/inventario_resp.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="requestMessage">
+        <wsdl:part name="payload" element="inp1:Inventario_Request"/>
+    </wsdl:message>
+    <wsdl:message name="replyMessage">
+        <wsdl:part name="payload" element="inp2:Inventario_Response"/>
+    </wsdl:message>
+    <wsdl:portType name="execute_ptt">
+        <wsdl:operation name="execute">
+            <wsdl:input message="tns:requestMessage"/>
+            <wsdl:output message="tns:replyMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="execute_bind" type="tns:execute_ptt">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="execute">
+            <soap:operation style="document" soapAction="execute"/>
+            <wsdl:input>
+                <soap:body use="literal" namespace="http://xmlns.oracle.com/4720vDIFARMA/CL_PIMCargaPerArt%C3%ADculosMarketplace/service1"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" namespace="http://xmlns.oracle.com/4720vDIFARMA/CL_PIMCargaPerArt%C3%ADculosMarketplace/service1"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+</wsdl:definitions>

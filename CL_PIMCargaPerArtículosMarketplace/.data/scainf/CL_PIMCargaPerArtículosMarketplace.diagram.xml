@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dgm:gDiagram xmlns:dgm="http://xmlns.oracle.com/sca/soadgm">
+    <dgm:gService name="PIMCargarPerArtMarketPipelineProxyService">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="100" width="137" height="54">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="93" width="156" height="68">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="PIMCargarPerArtMarketPipelineProxyService" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
+        <dgm:nodeIcon URI="/oracle/sb/tooling/ide/sca/internal/icons/icon_transport_http_20x20.png" X="7" Y="4" width="20" height="20"/>
+        <dgm:operations/>
+    </dgm:gService>
+    <dgm:gReference name="db_Inventario">
+        <dgm:body borderWidth="2" arcRad="20" X="1100" Y="26" width="136" height="54">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="1090" Y="19" width="156" height="68">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="db_Inventario" X="-10" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/db_adapter_20x20.png" X="14" Y="4" width="20" height="20"/>
+        <dgm:operations/>
+    </dgm:gReference>
+    <dgm:gReference name="db_ATRIBUTOS">
+        <dgm:body borderWidth="2" arcRad="20" X="1100" Y="114" width="136" height="54">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="1090" Y="107" width="156" height="68">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="db_ATRIBUTOS" X="-10" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/db_adapter_20x20.png" X="14" Y="4" width="20" height="20"/>
+        <dgm:operations/>
+    </dgm:gReference>
+    <dgm:gReference name="JMS_DEPOSITO_TRAZA">
+        <dgm:body borderWidth="2" arcRad="20" X="1100" Y="202" width="136" height="54">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="1090" Y="195" width="156" height="68">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="JMS_DEPOSITO_TRAZA" X="-10" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
+        <dgm:nodeIcon URI="/oracle/sb/tooling/ide/sca/internal/icons/icon_transport_jms_20x20.png" X="14" Y="4" width="20" height="20"/>
+        <dgm:operations/>
+    </dgm:gReference>
+    <dgm:gComponent name="PIMCargarPerArtMarketPipeline">
+        <dgm:body borderWidth="2" arcRad="20" X="564" Y="85" width="130" height="111">
+            <dgm:borderColor r="109" g="136" b="65"/>
+            <dgm:lightBgColor r="201" g="224" b="155"/>
+            <dgm:darkBgColor r="157" g="195" b="93"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="554" Y="78" width="150" height="127">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="__service__" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
+        <dgm:outputPort name="businessservice.-1338165236.db_Inventario" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
+        <dgm:outputPort name="businessservice.1608592140.db_ATRIBUTOS" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
+        <dgm:outputPort name="businessservice.1693405325.JMS_DEPOSITO_TRAZA" X="120" Y="65" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
+        <dgm:nodeIcon URI="/oracle/sb/tooling/ide/sca/internal/icons/icon_pipeline_20x20.gif" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gWireLink source="PIMCargarPerArtMarketPipelineProxyService" target="PIMCargarPerArtMarketPipeline/__service__" width="2">
+        <dgm:gSegment X1="168" Y1="110" X2="554" Y2="110"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="PIMCargarPerArtMarketPipeline/businessservice.-1338165236.db_Inventario" target="db_Inventario" width="2">
+        <dgm:gSegment X1="704" Y1="110" X2="728" Y2="110"/>
+        <dgm:gSegment X1="728" Y1="110" X2="728" Y2="36"/>
+        <dgm:gSegment X1="728" Y1="36" X2="1090" Y2="36"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="PIMCargarPerArtMarketPipeline/businessservice.1608592140.db_ATRIBUTOS" target="db_ATRIBUTOS" width="2">
+        <dgm:gSegment X1="704" Y1="135" X2="743" Y2="135"/>
+        <dgm:gSegment X1="743" Y1="135" X2="743" Y2="124"/>
+        <dgm:gSegment X1="743" Y1="124" X2="1090" Y2="124"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="PIMCargarPerArtMarketPipeline/businessservice.1693405325.JMS_DEPOSITO_TRAZA" target="JMS_DEPOSITO_TRAZA" width="2">
+        <dgm:gSegment X1="704" Y1="160" X2="728" Y2="160"/>
+        <dgm:gSegment X1="728" Y1="160" X2="728" Y2="212"/>
+        <dgm:gSegment X1="728" Y1="212" X2="1090" Y2="212"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+</dgm:gDiagram>
